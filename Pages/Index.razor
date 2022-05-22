@@ -1,7 +1,100 @@
 ﻿@page "/"
+@inject ProtectedSessionStorage ProtectedSessionStore
+@inject IDbContextFactory ContextFactory;
 
 <PageTitle>Index</PageTitle>
 
 <h1>QR Code Inventory Management Demo</h1>
 
 This is a demo showing a basic inventory management system based on QR Codes
+
+<br>
+
+@switch (LoginState)
+{
+    case false:
+        <label>Username</label>
+        <input type="text" @bind-value="username">
+        <br>
+        <p></p>
+        <label>Password</label>
+        <input type="password" @bind-value="password">
+        <br>
+        <button class="btn btn-primary" @onclick="Login">Login</button>
+        @if (userMessage != "" && userMessage != null)
+        {
+            <div class="alert alert-warning" role="alert">
+                @userMessage
+            </div>
+        }
+        break;
+    case true:
+        <p>Username - @_user.Username</p>
+        <button class="btn btn-primary" @onclick="Logout">Logout</button>
+        break;
+
+    default:
+        break;
+}
+
+@code
+{
+    string userMessage;
+    QRCodeIVMContext? _context;
+    bool LoginState = false;
+    User _user;
+    string username;
+    string password;
+
+    void Login()
+    {
+        _user = _context.Users.FirstOrDefault(x => x.Username == username);
+        if(_user != null)
+        {
+            if(_user.Password == password){
+                // login is sucessfull < cant spell it...
+                // Store the current user in session storage for use in other components
+                ProtectedSessionStore.SetAsync("CurrentUser", _user);
+                userMessage = "";
+                LoginState = true;
+            } else {
+                userMessage = "No matching user or password found in the databse. Please try again";
+            }
+        } else {
+            userMessage = "No matching user or password found in the databse. Please try again";
+        }
+    }
+
+    void Logout(){
+        _user = new User(); // cheap way to refresh user data ;)
+        userMessage = "Logged out sucessfully";
+        var result = ProtectedSessionStore.DeleteAsync("CurrentUser");
+        LoginState = false;
+        username = "";
+        password = "";
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _context = ContextFactory.GetDbContext();
+        var result = await ProtectedSessionStore.GetAsync<User>("CurrentUser");
+        if(result.Success){
+            _user = result.Value;
+            LoginState = true;
+        } else {
+            LoginState = false;
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        @* var result = await ProtectedSessionStore.GetAsync<User>("CurrentUser");
+        if(result.Success){
+            _user = result.Value;
+            LoginState = 2;
+        } else {
+            LoginState = 1;
+        } *@
+    }
+
+}

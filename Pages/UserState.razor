@@ -1,0 +1,33 @@
+@inject ProtectedSessionStorage ProtectedSessionStore
+@inject IDbContextFactory ContextFactory;
+
+@switch (LoginState)
+{
+    case false:
+        <p>No User Logged in - Goto Home Page To Login</p>
+        break;
+    case true:
+        <p>Username - @_user.Username</p>
+        break;
+}
+
+@code {
+    [Parameter]
+    public bool LoginState {get;set;}
+    User _user;
+    string username;
+    string password;
+    QRCodeIVMContext? _context;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _context = ContextFactory.GetDbContext();
+        var result = await ProtectedSessionStore.GetAsync<User>("CurrentUser");
+        if(result.Success){
+            _user = result.Value;
+            LoginState = true;
+        } else {
+            LoginState = false;
+        }
+    }
+}

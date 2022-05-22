@@ -31,6 +31,14 @@
     </span>
 </div>
 
+@if (userMessage != "" && userMessage != null)
+{
+    <div class="alert alert-warning" role="alert">
+        @userMessage
+    </div>
+
+}
+
 
 @code {
     private int currentCount = 0;
@@ -50,22 +58,29 @@
     }
 
     private void SaveItems(){
+
         // Check QR code is not null, device ID can be
         bool valid = true;
         foreach(var item in _addItems){
-            if(item.QRCode == ""){
+            if(item.QRCode == null){
                 valid = false;
                 userMessage = "QR code cannot be blank";
             }
         }
+
+        // Insert default values into the item 
         if(valid){
             foreach(var item in _addItems){
                 item.status = false;
                 item.UserId = 0;
+                if(item.DeviceName == null){
+                    item.DeviceName = "";
+                }
             }
+            _context.QRCodes.AddRange(_addItems);
+            _context.SaveChanges();
         }
-        _context.QRCodes.AddRange(_addItems);
-        _context.SaveChanges();
+        
     }
 
     protected override void OnInitialized(){

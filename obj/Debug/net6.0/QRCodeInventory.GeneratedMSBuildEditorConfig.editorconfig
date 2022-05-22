@@ -23,12 +23,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRkSXRlbXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/paul/Documents/CSharp/QRCodeInventory/Pages/BookOut.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQm9va091dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/paul/Documents/CSharp/QRCodeInventory/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/paul/Documents/CSharp/QRCodeInventory/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/paul/Documents/CSharp/QRCodeInventory/Pages/UserState.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlclN0YXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/paul/Documents/CSharp/QRCodeInventory/Pages/ViewItems.razor]

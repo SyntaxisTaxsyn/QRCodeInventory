@@ -45,35 +45,35 @@
         }
       },
       {
-        "HashCode": 491472010,
+        "HashCode": -100336836,
         "Kind": "Components.Component",
-        "Name": "QRCodeInventory.Pages.Index",
+        "Name": "QRCodeInventory.Pages.AddItems",
         "AssemblyName": "QRCodeInventory",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Index"
+            "TagName": "AddItems"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "QRCodeInventory.Pages.Index"
+          "Common.TypeName": "QRCodeInventory.Pages.AddItems"
         }
       },
       {
-        "HashCode": 652432760,
+        "HashCode": -699336263,
         "Kind": "Components.Component",
-        "Name": "QRCodeInventory.Pages.Index",
+        "Name": "QRCodeInventory.Pages.AddItems",
         "AssemblyName": "QRCodeInventory",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "QRCodeInventory.Pages.Index"
+            "TagName": "QRCodeInventory.Pages.AddItems"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "QRCodeInventory.Pages.Index",
+          "Common.TypeName": "QRCodeInventory.Pages.AddItems",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -111,35 +111,154 @@
         }
       },
       {
-        "HashCode": -100336836,
+        "HashCode": 106403284,
         "Kind": "Components.Component",
-        "Name": "QRCodeInventory.Pages.AddItems",
+        "Name": "QRCodeInventory.Pages.UserState",
         "AssemblyName": "QRCodeInventory",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "AddItems"
+            "TagName": "UserState"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "LoginState",
+            "TypeName": "System.Boolean",
+            "Metadata": {
+              "Common.PropertyName": "LoginState"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "QRCodeInventory.Pages.AddItems"
+          "Common.TypeName": "QRCodeInventory.Pages.UserState"
         }
       },
       {
-        "HashCode": -699336263,
+        "HashCode": -1234086360,
         "Kind": "Components.Component",
-        "Name": "QRCodeInventory.Pages.AddItems",
+        "Name": "QRCodeInventory.Pages.UserState",
         "AssemblyName": "QRCodeInventory",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "QRCodeInventory.Pages.AddItems"
+            "TagName": "QRCodeInventory.Pages.UserState"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "LoginState",
+            "TypeName": "System.Boolean",
+            "Metadata": {
+              "Common.PropertyName": "LoginState"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "QRCodeInventory.Pages.AddItems",
+          "Common.TypeName": "QRCodeInventory.Pages.UserState",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 491472010,
+        "Kind": "Components.Component",
+        "Name": "QRCodeInventory.Pages.Index",
+        "AssemblyName": "QRCodeInventory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "QRCodeInventory.Pages.Index"
+        }
+      },
+      {
+        "HashCode": 652432760,
+        "Kind": "Components.Component",
+        "Name": "QRCodeInventory.Pages.Index",
+        "AssemblyName": "QRCodeInventory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "QRCodeInventory.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "QRCodeInventory.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1010567660,
+        "Kind": "Components.Component",
+        "Name": "QRCodeInventory.Pages.BookOut",
+        "AssemblyName": "QRCodeInventory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BookOut"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "QRCodeInventory.Pages.BookOut"
+        }
+      },
+      {
+        "HashCode": 1601780676,
+        "Kind": "Components.Component",
+        "Name": "QRCodeInventory.Pages.BookOut",
+        "AssemblyName": "QRCodeInventory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "QRCodeInventory.Pages.BookOut"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "QRCodeInventory.Pages.BookOut",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1628982550,
+        "Kind": "Components.Component",
+        "Name": "QRCodeInventory.App",
+        "AssemblyName": "QRCodeInventory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "QRCodeInventory.App"
+        }
+      },
+      {
+        "HashCode": 1422081860,
+        "Kind": "Components.Component",
+        "Name": "QRCodeInventory.App",
+        "AssemblyName": "QRCodeInventory",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "QRCodeInventory.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "QRCodeInventory.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -322,39 +441,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "QRCodeInventory.Shared.NavMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1628982550,
-        "Kind": "Components.Component",
-        "Name": "QRCodeInventory.App",
-        "AssemblyName": "QRCodeInventory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "QRCodeInventory.App"
-        }
-      },
-      {
-        "HashCode": 1422081860,
-        "Kind": "Components.Component",
-        "Name": "QRCodeInventory.App",
-        "AssemblyName": "QRCodeInventory",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "QRCodeInventory.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "QRCodeInventory.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16665,8 +16751,18 @@
       "FileKind": "component"
     },
     {
+      "FilePath": "/home/paul/Documents/CSharp/QRCodeInventory/Pages/UserState.razor",
+      "TargetPath": "Pages\\UserState.razor",
+      "FileKind": "component"
+    },
+    {
       "FilePath": "/home/paul/Documents/CSharp/QRCodeInventory/Shared/MainLayout.razor",
       "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/home/paul/Documents/CSharp/QRCodeInventory/Pages/BookOut.razor",
+      "TargetPath": "Pages\\BookOut.razor",
       "FileKind": "component"
     },
     {
