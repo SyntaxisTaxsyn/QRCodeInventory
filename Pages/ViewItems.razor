@@ -1,0 +1,63 @@
+﻿@page "/viewitems"
+@inject IDbContextFactory ContextFactory;
+
+<PageTitle>ViewItems</PageTitle>
+
+<h1>View Items</h1>
+<p>View all items in the database</p>
+<br>
+<table class="table">
+    <tr>
+        <th>QR Code</th>
+        <th>Device Name</th>
+        <th>Status</th>
+        <th>User ID</th>
+    </tr>
+@if (_context != null)
+{
+    @foreach (var item in _context.QRCodes)
+    {
+        <tr>
+            <td>@item.QRCode</td>
+            <td>@item.DeviceName</td>
+            <td>@GetStatus(item.status)</td>
+            <td>@GetUserName(item.UserId)</td>
+        </tr>
+    }
+}
+</table>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+    private QRCodeIVMContext? _context;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    protected override void OnInitialized(){
+        _context = ContextFactory.GetDbContext();
+    }
+
+    private string GetUserName(int userid){
+        if(userid == 0){
+            return "-";
+        } else {
+            var user = _context.Users.FirstOrDefault(x => x.UserId == userid);
+            return user.Username;
+        }
+    }
+
+    private string GetStatus(bool status){
+        if(!status){
+            return "Available";
+        } else {
+            return "Booked Out";
+        }
+    }
+}

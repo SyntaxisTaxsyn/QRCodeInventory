@@ -1,0 +1,94 @@
+﻿@page "/additems"
+@inject IDbContextFactory ContextFactory;
+
+<PageTitle>Add Items</PageTitle>
+
+<h1>Add Items</h1>
+<p>Add items to the database</p>
+<br>
+<table class="table">
+    <tr>
+        <th>QR Code</th>
+        <th>Device Name</th>
+    </tr>
+@if (_context != null && _addItems != null)
+{
+    @foreach (var item in _addItems)
+    {
+        <tr>
+            <td><input @bind-value="item.QRCode"></td>
+            <td><input @bind-value="item.DeviceName"></td>
+        </tr>
+    }
+}
+</table>
+
+<div>
+    <span>
+        <button class="btn btn-primary" @onclick="AddItem">Add Item</button>
+        <button class="btn btn-primary" @onclick="RemoveItem">Remove Item</button>
+        <button class="btn btn-primary" @onclick="SaveItems">Save</button>
+    </span>
+</div>
+
+
+@code {
+    private int currentCount = 0;
+    private QRCodeIVMContext? _context;
+    private List<QRCodeIVM> _addItems;
+    private string userMessage;
+
+    private void AddItem(){
+        _addItems.Add(new QRCodeIVM());
+    }
+
+    private void RemoveItem(){
+        // prevent the list from having 0 entries
+        if(_addItems.Count > 1){
+            _addItems.RemoveAt(_addItems.Count - 1);
+        }
+    }
+
+    private void SaveItems(){
+        // Check QR code is not null, device ID can be
+        bool valid = true;
+        foreach(var item in _addItems){
+            if(item.QRCode == ""){
+                valid = false;
+                userMessage = "QR code cannot be blank";
+            }
+        }
+        if(valid){
+            foreach(var item in _addItems){
+                item.status = false;
+                item.UserId = 0;
+            }
+        }
+        _context.QRCodes.AddRange(_addItems);
+        _context.SaveChanges();
+    }
+
+    protected override void OnInitialized(){
+        _context = ContextFactory.GetDbContext();
+        _addItems = new List<QRCodeIVM>();
+        QRCodeIVM _newItem = new QRCodeIVM();
+        _addItems.Add(_newItem);
+    }
+
+    private string GetUserName(int userid){
+        if(userid == 0){
+            return "-";
+        } else {
+            var user = _context.Users.FirstOrDefault(x => x.UserId == userid);
+            return user.Username;
+        }
+    }
+
+    private string GetStatus(bool status){
+        if(!status){
+            return "Available";
+        } else {
+            return "Booked Out";
+        }
+    }
+}
