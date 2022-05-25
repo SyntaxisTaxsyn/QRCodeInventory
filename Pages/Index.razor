@@ -4,6 +4,7 @@
 
 <PageTitle>Index</PageTitle>
 
+
 <h1>QR Code Inventory Management Demo</h1>
 
 This is a demo showing a basic inventory management system based on QR Codes
@@ -48,6 +49,7 @@ This is a demo showing a basic inventory management system based on QR Codes
 
     void Login()
     {
+        _context = ContextFactory.GetDbContext();
         _user = _context.Users.FirstOrDefault(x => x.Username == username);
         if(_user != null)
         {
@@ -63,6 +65,7 @@ This is a demo showing a basic inventory management system based on QR Codes
         } else {
             userMessage = "No matching user or password found in the databse. Please try again";
         }
+        _context.Dispose();
     }
 
     void Logout(){
@@ -84,6 +87,7 @@ This is a demo showing a basic inventory management system based on QR Codes
         } else {
             LoginState = false;
         }
+        _context.Dispose();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)

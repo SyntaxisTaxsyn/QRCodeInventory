@@ -1,11 +1,11 @@
-﻿@page "/bookout"
+﻿@page "/bookin"
 @inject IDbContextFactory ContextFactory;
 @using BlazorBarcodeScanner.ZXing.JS
 
-<PageTitle>BookOut</PageTitle>
+<PageTitle>BookIn</PageTitle>
 
-<h1>Book Out</h1>
-<p>Use this feature to book an item out that has been assigned to you</p>
+<h1>Book In</h1>
+<p>Use this feature to book an item in that you are returning</p>
 <UserState></UserState>
 <br>
 @if (LoginState)
@@ -37,7 +37,6 @@
     </div>
 }
 
-
 @if (device != null)
 {
     <table>
@@ -57,12 +56,12 @@
             </td>
         </tr>
     </table>
-    <p>Please check the above details and confirm device book out</p>
-    <button class="btn btn-primary" @onclick="ConfirmBookOut">Confirm</button>
+    <p>Please check the above details and confirm device book in</p>
+    <button class="btn btn-primary" @onclick="ConfirmBookIn">Confirm</button>
 }
 @if (confirmation)
 {
-    <p>device - @devicename - booked out to user - @_user.Username</p>
+    <p>device - @devicename - booked in from user - @_user.Username</p>
 }
 
 @code {
@@ -95,8 +94,9 @@
         }
     }
 
-    private void ConfirmBookOut(){
-        device.status = true;
+    private void ConfirmBookIn(){
+        device.status = false;
+        device.UserId = 0;
         devicename = device.DeviceName;
         _context.SaveChanges();
         device = null;
@@ -106,27 +106,30 @@
     private void QrCodeScanned(){
 
         device = _context.QRCodes.FirstOrDefault(x => x.QRCode == QrcodeScan);
-        switch (true)
+        if (device == null)
         {
-            case true when device == null:
-                // Device does not exist
-                userMessage = "Device does not exist";
+            userMessage = "Device does not exist!";
+            device = null;
+        }
+        if (device != null && QrcodeScan != "")
+        {
+            if (device.status == false)
+            {
+                userMessage = "Device not assigned to a user";
                 device = null;
-                break;
-            case true when device.UserId != _user.UserId && device.UserId > 0:
-                // Device already assigned to a user
-                userMessage = "Device already assigned to another user";
-                device = null;
-                break;
-            case true when device != null && QrcodeScan != "":
-                // This is yours to book out
+            } else {
+                if (_user.UserId == device.UserId)
+            {
+                // this is yours to book out
                 userMessage = "";
-                device.UserId = _user.UserId;
-                break;
-            default:
-                // Other error
-                userMessage = "Other error occurred - contact development team";
-                break;
+
+            } else {
+                // this is not yours
+                device = null;
+                userMessage = "This item is booked to another user";
+            }
+            }
+            
         }
         
     }

@@ -1,10 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "WH1p4nH1NvS6/Vs1n0BdXBHIJoZb8p6DQ25gHS785SfoEb57JsiK+r+kezw94e7eSHPIC0gk8dnusJWNaytXVw==",
+  "dgSpecHash": "kNrDhN15wnqjwpQb5YkglbZdb3fhBsWl6UNo3yleY6YQPFVs1My2nNysS85MY+Jd3tcFsEeJnJXdqr8FaRBWOg==",
   "success": true,
   "projectFilePath": "/home/paul/Documents/CSharp/QRCodeInventory/QRCodeInventory.csproj",
   "expectedPackageFiles": [
+    "/home/paul/.nuget/packages/blazorbarcodescanner.zxing.js/0.2.8/blazorbarcodescanner.zxing.js.0.2.8.nupkg.sha512",
     "/home/paul/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/home/paul/.nuget/packages/microsoft.aspnetcore.authorization/6.0.0/microsoft.aspnetcore.authorization.6.0.0.nupkg.sha512",
+    "/home/paul/.nuget/packages/microsoft.aspnetcore.components/6.0.0/microsoft.aspnetcore.components.6.0.0.nupkg.sha512",
+    "/home/paul/.nuget/packages/microsoft.aspnetcore.components.analyzers/6.0.0/microsoft.aspnetcore.components.analyzers.6.0.0.nupkg.sha512",
+    "/home/paul/.nuget/packages/microsoft.aspnetcore.components.forms/6.0.0/microsoft.aspnetcore.components.forms.6.0.0.nupkg.sha512",
+    "/home/paul/.nuget/packages/microsoft.aspnetcore.components.web/6.0.0/microsoft.aspnetcore.components.web.6.0.0.nupkg.sha512",
+    "/home/paul/.nuget/packages/microsoft.aspnetcore.metadata/6.0.0/microsoft.aspnetcore.metadata.6.0.0.nupkg.sha512",
     "/home/paul/.nuget/packages/microsoft.entityframeworkcore/6.0.5/microsoft.entityframeworkcore.6.0.5.nupkg.sha512",
     "/home/paul/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.5/microsoft.entityframeworkcore.abstractions.6.0.5.nupkg.sha512",
     "/home/paul/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.5/microsoft.entityframeworkcore.analyzers.6.0.5.nupkg.sha512",
@@ -19,10 +26,12 @@
     "/home/paul/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "/home/paul/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
     "/home/paul/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/home/paul/.nuget/packages/microsoft.jsinterop/6.0.0/microsoft.jsinterop.6.0.0.nupkg.sha512",
     "/home/paul/.nuget/packages/mysqlconnector/2.1.2/mysqlconnector.2.1.2.nupkg.sha512",
     "/home/paul/.nuget/packages/pomelo.entityframeworkcore.mysql/6.0.1/pomelo.entityframeworkcore.mysql.6.0.1.nupkg.sha512",
     "/home/paul/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
     "/home/paul/.nuget/packages/system.diagnostics.diagnosticsource/6.0.0/system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "/home/paul/.nuget/packages/system.io.pipelines/6.0.0/system.io.pipelines.6.0.0.nupkg.sha512",
     "/home/paul/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []

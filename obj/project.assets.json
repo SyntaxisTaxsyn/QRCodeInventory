@@ -2,6 +2,25 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "BlazorBarcodeScanner.ZXing.JS/0.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "6.0.0",
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorBarcodeScanner.ZXing.JS.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorBarcodeScanner.ZXing.JS.dll": {}
+        },
+        "build": {
+          "buildTransitive/BlazorBarcodeScanner.ZXing.JS.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorBarcodeScanner.ZXing.JS.props": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -9,6 +28,76 @@
         },
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authorization/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Metadata": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.Authorization.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authorization.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "6.0.0",
+          "Microsoft.AspNetCore.Components.Analyzers": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.Components.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Components.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.Analyzers/6.0.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.Forms/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.Components.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Components.Forms.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.Web/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "6.0.0",
+          "Microsoft.AspNetCore.Components.Forms": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.JSInterop": "6.0.0",
+          "System.IO.Pipelines": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.Components.Web.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Components.Web.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Metadata/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.Metadata.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Metadata.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore/6.0.5": {
@@ -200,6 +289,15 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "Microsoft.JSInterop/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.JSInterop.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.JSInterop.dll": {}
+        }
+      },
       "MySqlConnector/2.1.2": {
         "type": "package",
         "compile": {
@@ -253,6 +351,18 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "System.IO.Pipelines/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.IO.Pipelines.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/System.IO.Pipelines.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
         "compile": {
@@ -268,6 +378,26 @@
     }
   },
   "libraries": {
+    "BlazorBarcodeScanner.ZXing.JS/0.2.8": {
+      "sha512": "Vi7DVDR0/dtb9gNBdWMEv0NK54ztftSSM/jomA9UwnRSY/oBMpcub02qEO+xQrVH6IluYrGqu2xlfD7XaGcRpg==",
+      "type": "package",
+      "path": "blazorbarcodescanner.zxing.js/0.2.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazorbarcodescanner.zxing.js.0.2.8.nupkg.sha512",
+        "blazorbarcodescanner.zxing.js.nuspec",
+        "build/BlazorBarcodeScanner.ZXing.JS.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/BlazorBarcodeScanner.ZXing.JS.props",
+        "buildTransitive/BlazorBarcodeScanner.ZXing.JS.props",
+        "lib/net5.0/BlazorBarcodeScanner.ZXing.JS.dll",
+        "lib/net6.0/BlazorBarcodeScanner.ZXing.JS.dll",
+        "lib/netstandard2.1/BlazorBarcodeScanner.ZXing.JS.dll",
+        "staticwebassets/BlazorBarcodeScanner.js",
+        "staticwebassets/zxingjs.index.min.js"
+      ]
+    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -282,6 +412,105 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.Authorization/6.0.0": {
+      "sha512": "HPEhmNwINXzGVWirzmvVxx5/GkoaQJC7vKNIbhOUTzgnRHEf2zO6S2s4lMw3TPFWBGcAlfn6Ta0cVB9f15QC8w==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authorization/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.Authorization.dll",
+        "lib/net461/Microsoft.AspNetCore.Authorization.xml",
+        "lib/net6.0/Microsoft.AspNetCore.Authorization.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Authorization.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
+        "microsoft.aspnetcore.authorization.6.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.authorization.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components/6.0.0": {
+      "sha512": "ETks/RMYyiC91P89jL9XNEwTeYlpyzt2+Z584v70h+B9//BO0cc68gAlhz3E0v/9h4NqCSHbTlopvMvj0qxnEg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/net6.0/Microsoft.AspNetCore.Components.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Components.xml",
+        "microsoft.aspnetcore.components.6.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.components.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Analyzers/6.0.0": {
+      "sha512": "2cpebhhUAJXYgvrePJNXzhJfM5u6MAIuu4Nho6LEjQliMtAQ6NcdtYxkezoFxqTrgT1fZR0CSYAxp7k41q6PVQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.analyzers/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll",
+        "build/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
+        "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
+        "microsoft.aspnetcore.components.analyzers.6.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.components.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Forms/6.0.0": {
+      "sha512": "POjep/9qy79PD/q/5Gai7Xsg6Oybmo10+bVsCkoTrfu1kAO8dWgbQgJWH8I/VMfOPZY/dPgfo+BitqEriWMuKQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.forms/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/net6.0/Microsoft.AspNetCore.Components.Forms.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Components.Forms.xml",
+        "microsoft.aspnetcore.components.forms.6.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.components.forms.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Web/6.0.0": {
+      "sha512": "EvTZEhXCqcIxEs01ScF0ts/CyMOzXQIFfcgwTeLae7dQV7WnPEFhqrlD+1l78lA/h+Uer1RvaRbkAScGE/0tyQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.web/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/net6.0/Microsoft.AspNetCore.Components.Web.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Components.Web.xml",
+        "microsoft.aspnetcore.components.web.6.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.components.web.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Metadata/6.0.0": {
+      "sha512": "giBCvjANLIOqC+DJ84zCkCQnE4ebRTrgVyBe5e0gG3/F8GYzdqSSdtMSAvbOkBQsf0F8dySBPSM59vX6ksOeQg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.metadata/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.Metadata.dll",
+        "lib/net461/Microsoft.AspNetCore.Metadata.xml",
+        "lib/net6.0/Microsoft.AspNetCore.Metadata.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Metadata.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
+        "microsoft.aspnetcore.metadata.6.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.metadata.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore/6.0.5": {
@@ -581,6 +810,21 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.JSInterop/6.0.0": {
+      "sha512": "M7NyTgOY0vhozRtppvxUDJblgPWBUg6ioJ2vpaKpXVYILB0No8Vrv4HPis+ig5BzaOWd3PR9D3oTovYKGBt3mw==",
+      "type": "package",
+      "path": "microsoft.jsinterop/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net6.0/Microsoft.JSInterop.dll",
+        "lib/net6.0/Microsoft.JSInterop.xml",
+        "microsoft.jsinterop.6.0.0.nupkg.sha512",
+        "microsoft.jsinterop.nuspec"
+      ]
+    },
     "MySqlConnector/2.1.2": {
       "sha512": "JVokQTUNN3WHAu9Vw8ieeq1dXTFokJiig5P0VJ4f439UxRrsPo6SaVWC8Zdm6mkPeQFhZ0/9afdWa02EY/1j/w==",
       "type": "package",
@@ -672,6 +916,31 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.IO.Pipelines/6.0.0": {
+      "sha512": "mXX66shZ4xLlI3vNLaJ0lt8OIZdmXTvIqXRdQX5HLVGSkLhINLsVhyZuX2UdRFnOGkqnwmMUs40pIIQ7mna4+A==",
+      "type": "package",
+      "path": "system.io.pipelines/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.IO.Pipelines.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.IO.Pipelines.dll",
+        "lib/net461/System.IO.Pipelines.xml",
+        "lib/net6.0/System.IO.Pipelines.dll",
+        "lib/net6.0/System.IO.Pipelines.xml",
+        "lib/netcoreapp3.1/System.IO.Pipelines.dll",
+        "lib/netcoreapp3.1/System.IO.Pipelines.xml",
+        "lib/netstandard2.0/System.IO.Pipelines.dll",
+        "lib/netstandard2.0/System.IO.Pipelines.xml",
+        "system.io.pipelines.6.0.0.nupkg.sha512",
+        "system.io.pipelines.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "type": "package",
@@ -700,6 +969,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BlazorBarcodeScanner.ZXing.JS >= 0.2.8",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.5",
       "Pomelo.EntityFrameworkCore.MySql >= 6.0.1"
     ]
@@ -741,6 +1011,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "BlazorBarcodeScanner.ZXing.JS": {
+            "target": "Package",
+            "version": "[0.2.8, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",

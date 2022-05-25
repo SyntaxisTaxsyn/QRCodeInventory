@@ -34,3 +34,4 @@
 /home/paul/Documents/CSharp/QRCodeInventory/obj/Debug/net6.0/QRCodeInventory.pdb
 /home/paul/Documents/CSharp/QRCodeInventory/obj/Debug/net6.0/QRCodeInventory.genruntimeconfig.cache
 /home/paul/Documents/CSharp/QRCodeInventory/obj/Debug/net6.0/ref/QRCodeInventory.dll
+/home/paul/Documents/CSharp/QRCodeInventory/bin/Debug/net6.0/BlazorBarcodeScanner.ZXing.JS.dll

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JilV2Tc3sowudAFpTruAhGQ6S1dBb5VPNcTTvl6gxLA=",
+  "Hash": "aoQdI5gYUuwIcafSQXcIdrcjbUUKDptGIEwqI7El/18=",
   "Source": "QRCodeInventory",
   "BasePath": "_content/QRCodeInventory",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "/home/paul/.nuget/packages/blazorbarcodescanner.zxing.js/0.2.8/staticwebassets/BlazorBarcodeScanner.js",
+      "SourceId": "BlazorBarcodeScanner.ZXing.JS",
+      "SourceType": "Package",
+      "ContentRoot": "/home/paul/.nuget/packages/blazorbarcodescanner.zxing.js/0.2.8/staticwebassets/",
+      "BasePath": "_content/BlazorBarcodeScanner.ZXing.JS",
+      "RelativePath": "BlazorBarcodeScanner.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/home/paul/.nuget/packages/blazorbarcodescanner.zxing.js/0.2.8/staticwebassets/BlazorBarcodeScanner.js"
+    },
+    {
+      "Identity": "/home/paul/.nuget/packages/blazorbarcodescanner.zxing.js/0.2.8/staticwebassets/zxingjs.index.min.js",
+      "SourceId": "BlazorBarcodeScanner.ZXing.JS",
+      "SourceType": "Package",
+      "ContentRoot": "/home/paul/.nuget/packages/blazorbarcodescanner.zxing.js/0.2.8/staticwebassets/",
+      "BasePath": "_content/BlazorBarcodeScanner.ZXing.JS",
+      "RelativePath": "zxingjs.index.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/home/paul/.nuget/packages/blazorbarcodescanner.zxing.js/0.2.8/staticwebassets/zxingjs.index.min.js"
+    },
     {
       "Identity": "/home/paul/Documents/CSharp/QRCodeInventory/obj/Debug/net6.0/scopedcss/bundle/QRCodeInventory.styles.css",
       "SourceId": "QRCodeInventory",

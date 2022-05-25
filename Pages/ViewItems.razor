@@ -48,7 +48,8 @@
         if(userid == 0){
             return "-";
         } else {
-            var user = _context.Users.FirstOrDefault(x => x.UserId == userid);
+            QRCodeIVMContext _SubContext = ContextFactory.GetDbContext();
+            var user = _SubContext.Users.FirstOrDefault(x => x.UserId == userid);
             return user.Username;
         }
     }
